@@ -1,13 +1,11 @@
-const massMark = 78;
-const heightMark = 1.69;
-const massJohn = 92;
-const heightJohn = 1.95;
+const number = "1945";
+console.log(Number(number) + 45, typeof number);
 
-const BMIMark = massMark / (heightMark * heightMark);
-const BMIJohn = massJohn / (heightJohn * heightJohn);
+const year = 2005;
+console.log(String(year), typeof year);
 
-if (BMIMark > BMIJohn) {
-  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
-} else {
-  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
-}
+console.log("i am " + Number(23) + Number(5) + " years old");
+
+let n = "1" + 1;
+n = n - 1;
+console.log(n);
