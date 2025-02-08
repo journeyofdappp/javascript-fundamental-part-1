@@ -1,11 +1,14 @@
-const number = "1945";
-console.log(Number(number) + 45, typeof number);
+const money = 0;
 
-const year = 2005;
-console.log(String(year), typeof year);
+if (money) {
+  console.log("Don't spend it all");
+} else {
+  console.log("You should get a job!");
+}
 
-console.log("i am " + Number(23) + Number(5) + " years old");
-
-let n = "1" + 1;
-n = n - 1;
-console.log(n);
+let height;
+if (height) {
+  console.log("Yay! Height is defined");
+} else {
+  console.log("Height is undefined");
+}
