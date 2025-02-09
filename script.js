@@ -1,27 +1,21 @@
-"use strict";
+const calcAverage = (a, b, c) => (a + b + c) / 3;
 
-// Function declaration
-function calculateAge(birthYear) {
-  return 2025 - birthYear;
-}
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
 
-const myAge = calculateAge(2005);
-console.log(myAge);
-
-// Function expression
-const message = function (firstName, message) {
-  return `Hi ${firstName}, ${message}`;
+const checkWinner = (avgDolphins, avgKoalas) => {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win 🏆(${avgDolphins} vs ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win 🏆(${avgKoalas} vs ${avgDolphins})`);
+  } else {
+    console.log("No team wins...");
+  }
 };
 
-const messageData = message("Sara", "How are you?");
-console.log(messageData);
+checkWinner(scoreDolphins, scoreKoalas);
 
-// Arrow function
-const calculateAgeArrow = (firstName, birthYear) => {
-  const age = 2025 - birthYear;
-  const retirement = 65 - age;
-  const retirementYears = retirement + 2025;
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
 
-  return `${firstName}'s age is ${age} years, she retires in ${retirementYears}`;
-};
-console.log(calculateAgeArrow("Sarah", 2005));
+checkWinner(scoreDolphins, scoreKoalas);
