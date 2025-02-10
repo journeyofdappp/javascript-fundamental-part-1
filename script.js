@@ -1,24 +1,32 @@
-const data = {
-  name: "John Doe",
-  birthYear: 1991,
-  job: "Senior Programmer",
-  office: "United Tractors",
-  address: {
-    street: "123 Main St",
-    city: "Anytown",
-    state: "CA",
-    zip: "12345",
-  },
-  hasDriverLicense: true,
-  calcAge: function () {
-    this.age = 2023 - this.birthYear;
-    return this.age;
-  },
-  getSummary: function () {
-    return `${this.name} as a ${this.job} at ${
-      this.office
-    } and he is ${this.calcAge()} years old.`;
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
   },
 };
 
-console.log(data.getSummary());
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
+
+console.log(mark.calcBMI());
+console.log(john.calcBMI());
+
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`
+  );
+} else if (mark.bmi < john.bmi) {
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`
+  );
+}
